@@ -1,24 +1,48 @@
 import React from "react";
+import Travel1 from "./Travel1";
 
-const Travel = () => (
-  <figure>
-    <img src = "https://image.noelshack.com/fichiers/2019/15/2/1554803907-i470045.jpg"
-    alt = "Tresana"/>
-    <figcaption>
-    	<ul>
-    		<li><strong>Destination</strong> - Tresana</li>
-            <li><strong>Country</strong> - Italy</li>
-            <li><strong>Distance</strong> - 1215 km</li>
-     	</ul>
-     <img src = "https://image.noelshack.com/fichiers/2019/15/2/1554804903-burjkhalifa.jpg"
-    alt = "Tresana"/>
-    	<ul>
-            <li><strong>Destination</strong> - Dubai</li>
-            <li><strong>Country</strong> - United Arab Emirates</li>
-            <li><strong>Distance</strong> - 6751 km</li>
-     	</ul>
-     </figcaption>
-  </figure>
-);
+const travelList = [
+{
+	destination: 'Dubai',
+	country: 'Italie',
+	distance: '1215km',
+	image: "https://image.noelshack.com/fichiers/2019/15/2/1554804903-burjkhalifa.jpg"
+},
+{
+	destination: 'Mongolia',
+	country: 'Italie',
+	distance: '1215km',
+	image: "https://image.noelshack.com/fichiers/2019/15/2/1554804903-burjkhalifa.jpg"
+}, 
+{
+	destination: 'Bahrain',
+	country: 'Italie',
+	distance: '1215km',
+	image: "https://image.noelshack.com/fichiers/2019/15/2/1554804903-burjkhalifa.jpg"
+},
+{
+	destination: 'Los Angeles',
+	country: 'Italie',
+	distance: '1215km',
+	image: "https://image.noelshack.com/fichiers/2019/15/2/1554804903-burjkhalifa.jpg"
+},
+{
+	destination: 'California',
+	country: 'Italie',
+	distance: '1215km',
+	image: "https://image.noelshack.com/fichiers/2019/15/2/1554804903-burjkhalifa.jpg"
+},
+
+];
+
+const Travel = () =>(
+	<div>
+		{travelList.map(element =>(
+			<Travel1 image = {element.image} destination = {element.destination} country = {element.country} distance = {element.distance}/>
+		))}
+	</div>
+	)
+
 
 export default Travel;
+
